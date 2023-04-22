@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SMAIN.Views.Login"
+             Background="#1566A3">
+             
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+
+            <Image Source="ic_smain03.png" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Image>
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Login" TextColor="White" FontAttributes="Bold" FontSize="Large" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Entry x:Name="txtUsername" Placeholder="Username" TextColor="White" PlaceholderColor="LightGray"></Entry>
+            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" TextColor="White" PlaceholderColor="LightGray"></Entry>
+            <Button
+                VerticalOptions="Center"
+                Text="Iniciar sesión"
+                BackgroundColor="#3E93D4"
+                TextColor="White"              
+                BorderColor="#3E93D4"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="Button_Clicked">
+            </Button>
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="¿No tienes cuenta?  " TextColor="LightGray"/>
+                        <Span Text="Registrarse" TextColor="LightBlue" FontAttributes="Bold" TextDecorations="Underline"/>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
